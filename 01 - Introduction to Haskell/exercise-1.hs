@@ -1,7 +1,7 @@
 import Data.Char
 
 toDigits :: Integer -> [Integer]
-toDigits n = map (\x -> read [x]::Integer) $ show n
+toDigits n = map toInteger $ map digitToInt $ show n
 
 toDigitsRev :: Integer -> [Integer]
-toDigitsRev n = reverse $ map (\x -> read [x]::Integer) $ show n
+toDigitsRev n = reverse $ map toInteger $ map digitToInt $ show n
